@@ -1,0 +1,565 @@
+@prefix data: <http://example.com/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+data:1 rdf:type data:mahasiswa;
+    data:nama "Sina Mustopa";
+    data:jk "Laki-laki";
+    data:npm "140810180017";
+    data:prodi "Teknik Informatika";
+    data:angkatan "2018";
+    data:ttlLahir "Bogor, 1 Februari 2000";
+    data:agama "Islam";
+    data:email "mustopa.sina@gmail.com";
+    data:alamat "Jl Bogor";
+    data:noHP "081289725836";
+    data:urlFoto "";
+    .
+
+data:2 rdf:type data:mahasiswa;
+    data:nama "Alfian Fadhil";
+    data:jk "Laki-laki";
+    data:npm "140810180055";
+    data:prodi "Teknik Informatika";
+    data:angkatan "2018";
+    data:ttlLahir "Cimahi, 11 Juni 2000";
+    data:agama "Islam";
+    data:email "alfian@gmail.com";
+    data:alamat "Jl Cimahi";
+    data:noHP "081112123499";
+    data:urlFoto "";
+    .
+
+data:3 rdf:type data:mahasiswa;
+    data:nama "Sheila Azhar";
+    data:jk "Perempuan";
+    data:npm "140810180001";
+    data:prodi "Teknik Informatika";
+    data:angkatan "2018";
+    data:ttlLahir "Majalengka, 24 Januari 2000";
+    data:agama "Islam";
+    data:email "sheila@gmail.com";
+    data:alamat "Jl Majalengka timur";
+    data:noHP "08111212119";
+    data:urlFoto "";
+    .
+
+data:4 rdf:type data:mahasiswa;
+    data:nama "Sitti Ufairoh Azzahra";
+    data:jk "Perempuan";
+    data:npm "140810180002";
+    data:prodi "Teknik Informatika";
+    data:angkatan "2018";
+    data:ttlLahir "Purwakarta, 12 Februari 2000";
+    data:agama "Islam";
+    data:email "ufairoh@gmail.com";
+    data:alamat "Jl Purwakarta 5";
+    data:noHP "08111211234";
+    data:urlFoto "";
+    .
+
+data:5 rdf:type data:mahasiswa;
+    data:nama "Fauzan Akmal Hariz";
+    data:jk "Laki-laki";
+    data:npm "140810180005";
+    data:prodi "Teknik Informatika";
+    data:angkatan "2018";
+    data:ttlLahir "Bogor, 19 Mei 2000";
+    data:agama "Islam";
+    data:email "fauzan@gmail.com";
+    data:alamat "Jl Parung";
+    data:noHP "08826284129";
+    data:urlFoto "";
+    .
+
+data:6 rdf:type data:mahasiswa;
+    data:nama "Anugerah Prima Bagaskara";
+    data:jk "Laki-laki";
+    data:npm "140110180005";
+    data:prodi "Matematika";
+    data:angkatan "2018";
+    data:ttlLahir "Sukabumi, 11 Mei 2000";
+    data:agama "Islam";
+    data:email "primab@gmail.com";
+    data:alamat "Jl Ciletuh";
+    data:noHP "08826284126";
+    data:urlFoto "";
+    .
+
+data:7 rdf:type data:mahasiswa;
+    data:nama "Kartika Dewi";
+    data:jk "Perempuan";
+    data:npm "140110180003";
+    data:prodi "Matematika";
+    data:angkatan "2018";
+    data:ttlLahir "Jakarta, 21 Mei 2000";
+    data:agama "Islam";
+    data:email "kartika.a@gmail.com";
+    data:alamat "Jl Center Park";
+    data:noHP "08826284111";
+    data:urlFoto "";
+    .
+
+data:8 rdf:type data:mahasiswa;
+    data:nama "Malik Fahad";
+    data:jk "Laki-laki";
+    data:npm "140110190055";
+    data:prodi "Matematika";
+    data:angkatan "2019";
+    data:ttlLahir "Solo, 25 Mei 2001";
+    data:agama "Islam";
+    data:email "malik.fah@gmail.com";
+    data:alamat "Jl Kencana";
+    data:noHP "08826284112";
+    data:urlFoto "";
+    .
+
+data:9 rdf:type data:mahasiswa;
+    data:nama "Kevin Yosafat";
+    data:jk "Laki-laki";
+    data:npm "140110170023";
+    data:prodi "Matematika";
+    data:angkatan "2017";
+    data:ttlLahir "Banten, 30 September 1999";
+    data:agama "Kristen";
+    data:email "kevyosa@gmail.com";
+    data:alamat "Jl Bumikiara";
+    data:noHP "08826223111";
+    data:urlFoto "";
+    .
+
+data:10 rdf:type data:mahasiswa;
+    data:nama "Chandra Liow";
+    data:jk "Laki-laki";
+    data:npm "140110180014";
+    data:prodi "Matematika";
+    data:angkatan "2018";
+    data:ttlLahir "Semarang, 30 Juli 2000";
+    data:agama "Kristen";
+    data:email "chandral@gmail.com";
+    data:alamat "Jl kencana 4";
+    data:noHP "08826211111";
+    data:urlFoto "";
+    .
+
+
+
+data:11 rdf:type data:mahasiswa;
+    data:nama "Yusuf Miami";
+    data:jk "Laki-laki";
+    data:npm "140210170001";
+    data:prodi "Kimia";
+    data:angkatan "2017";
+    data:ttlLahir "Klaten, 21 Juli 1999";
+    data:agama "Islam";
+    data:email "ymiami@gmail.com";
+    data:alamat "Jl kencana 10 Klaten";
+    data:noHP "08831211111";
+    data:urlFoto "";
+    .
+
+data:12 rdf:type data:mahasiswa;
+    data:nama "Shinta Cantika";
+    data:jk "Perempuan";
+    data:npm "140210170004";
+    data:prodi "Kimia";
+    data:angkatan "2017";
+    data:ttlLahir "Jakarta, 18 Juli 2000";
+    data:agama "Islam";
+    data:email "shincan@gmail.com";
+    data:alamat "Grogol Timu 64";
+    data:noHP "08831213511";
+    data:urlFoto "";
+    .
+
+data:13 rdf:type data:mahasiswa;
+    data:nama "Dea Dewi";
+    data:jk "Perempuan";
+    data:npm "140210180011";
+    data:prodi "Kimia";
+    data:angkatan "2018";
+    data:ttlLahir "Bandung, 17 April 2000";
+    data:agama "Islam";
+    data:email "deadewi@gmail.com";
+    data:alamat "Jl Sukarno Hatta 5";
+    data:noHP "08839013511";
+    data:urlFoto "";
+    .
+
+data:14 rdf:type data:mahasiswa;
+    data:nama "David Hutapea";
+    data:jk "Laki-laki";
+    data:npm "140210190054";
+    data:prodi "Kimia";
+    data:angkatan "2019";
+    data:ttlLahir "Medan, 17 Agustus 2001";
+    data:agama "Kristen";
+    data:email "davidhut@gmail.com";
+    data:alamat "Jl Medan Panjang 11";
+    data:noHP "08839011811";
+    data:urlFoto "";
+    .
+
+data:15 rdf:type data:mahasiswa;
+    data:nama "Cintya Rifka";
+    data:jk "Perempuan";
+    data:npm "140210180066";
+    data:prodi "Kimia";
+    data:angkatan "2018";
+    data:ttlLahir "Jakarta, 21 Agustus 2000";
+    data:agama "Islam";
+    data:email "cintya_r@gmail.com";
+    data:alamat "Jl Sudirman 11";
+    data:noHP "08839011801";
+    data:urlFoto "";
+    .
+
+data:16 rdf:type data:mahasiswa;
+    data:nama "Hanifah Azian";
+    data:jk "Laki-laki";
+    data:npm "140310180001";
+    data:prodi "Fisika";
+    data:angkatan "2018";
+    data:ttlLahir "Depok, 18 April 2000";
+    data:agama "Islam";
+    data:email "hanizi@gmail.com";
+    data:alamat "Jl Depok baru 99";
+    data:noHP "08129014401";
+    data:urlFoto "";
+    .
+
+data:17 rdf:type data:mahasiswa;
+    data:nama "Ni Made Cantika";
+    data:jk "Perempuan";
+    data:npm "140310180022";
+    data:prodi "Fisika";
+    data:angkatan "2018";
+    data:ttlLahir "Bali, 5 Januari 2000";
+    data:agama "Hindu";
+    data:email "madecantika@gmail.com";
+    data:alamat "Jl Denpasar 18";
+    data:noHP "081290132091";
+    data:urlFoto "";
+    .
+
+data:18 rdf:type data:mahasiswa;
+    data:nama "Naufal Syauki";
+    data:jk "Laki-laki";
+    data:npm "140310190022";
+    data:prodi "Fisika";
+    data:angkatan "2019";
+    data:ttlLahir "Yogyakarta, 13 September 2001";
+    data:agama "Islam";
+    data:email "naufals@gmail.com";
+    data:alamat "Jl Kota tua 21";
+    data:noHP "081290132145";
+    data:urlFoto "";
+    .
+
+data:19 rdf:type data:mahasiswa;
+    data:nama "Gilbert Einstein";
+    data:jk "Laki-laki";
+    data:npm "140310190011";
+    data:prodi "Fisika";
+    data:angkatan "2019";
+    data:ttlLahir "Bantul, 23 November 2001";
+    data:agama "Kristen";
+    data:email "gilberteins@gmail.com";
+    data:alamat "Jl Klaten Baru 54";
+    data:noHP "081310132145";
+    data:urlFoto "";
+    .
+
+data:20 rdf:type data:mahasiswa;
+    data:nama "Akbar Musa";
+    data:jk "Laki-laki";
+    data:npm "140310170046";
+    data:prodi "Fisika";
+    data:angkatan "2017";
+    data:ttlLahir "Bogor, 22 Juli 1999";
+    data:agama "Islam";
+    data:email "akbarmus@gmail.com";
+    data:alamat "Jl Cibatu Indah 88";
+    data:noHP "081310132343";
+    data:urlFoto "";
+    .
+
+
+
+data:21 rdf:type data:mahasiswa;
+    data:nama "Vivian Devi";
+    data:jk "Perempuan";
+    data:npm "140310180037";
+    data:prodi "Fisika";
+    data:angkatan "2018";
+    data:ttlLahir "Bojong,  27 Desember 2000";
+    data:agama "Islam";
+    data:email "viviandevi@gmail.com";
+    data:alamat "Jl Cicurug 99";
+    data:noHP "081310137652";
+    data:urlFoto "";
+.
+
+data:22 rdf:type data:mahasiswa;
+    data:nama "Anselna Pratiwii";
+    data:jk "Perempuan";
+    data:npm "140310200057";
+    data:prodi "Fisika";
+    data:angkatan "2020";
+    data:ttlLahir "Bandung,  25 Desember 2002";
+    data:agama "Islam";
+    data:email "alselnap@gmail.com";
+    data:alamat "Jl Cikeruh 80";
+    data:noHP "08131013550";
+    data:urlFoto "";
+    .
+
+data:23 rdf:type data:mahasiswa;
+    data:nama "Shania Sahra";
+    data:jk "Perempuan";
+    data:npm "140210190027";
+    data:prodi "Kimia";
+    data:angkatan "2019";
+    data:ttlLahir "Bojong,  27 Januari 2001";
+    data:agama "Islam";
+    data:email "sharasnhi@gmail.com";
+    data:alamat "Jl Cimanggu 91";
+    data:noHP "089310237652";
+    data:urlFoto "";
+    .
+
+data:24 rdf:type data:mahasiswa;
+    data:nama "Alberto Reyna";
+    data:jk "Laki-laki";
+    data:npm "140410180017";
+    data:prodi "Biologi";
+    data:angkatan "2018";
+    data:ttlLahir "Cimahi,  7 Desember 2000";
+    data:agama "Islam";
+    data:email "reynavalorant@gmail.com";
+    data:alamat "Jl gatsu 19";
+    data:noHP "08932327652";
+    data:urlFoto "";
+    .
+
+data:25 rdf:type data:mahasiswa;
+    data:nama "Marvelinus";
+    data:jk "Laki-laki";
+    data:npm "140310180087";
+    data:prodi "Fisika";
+    data:angkatan "2018";
+    data:ttlLahir "Karanganyar,  27 Februari 2000";
+    data:agama "Kristen";
+    data:email "marvelcpti@gmail.com";
+    data:alamat "Jl Cicurug 29";
+    data:noHP "081378937752";
+    data:urlFoto "";
+    .
+
+data:26 rdf:type data:mahasiswa;
+    data:nama "Sarini Dua";
+    data:jk "Perempuan";
+    data:npm "140610200037";
+    data:prodi "Statistika";
+    data:angkatan "2020";
+    data:ttlLahir "Bojong,  25 Desember 2002";
+    data:agama "Islam";
+    data:email "miesedap2@gmail.com";
+    data:alamat "Jl Cimangu 99";
+    data:noHP "087310329152";
+    data:urlFoto "";
+.
+
+data:27 rdf:type data:mahasiswa;
+    data:nama "Sandyawan Setiadi";
+    data:jk "Laki-laki";
+    data:npm "140910180062";
+    data:prodi "Teknik Elektro";
+    data:angkatan "2018";
+    data:ttlLahir "Cimahi,  17 Desember 2000";
+    data:agama "Islam";
+    data:email "sandyawan@gmail.com";
+    data:alamat "Jl Cibeber 99";
+    data:noHP "081314231652";
+    data:urlFoto "";
+    .
+
+data:28 rdf:type data:mahasiswa;
+    data:nama "Sadil Ramdana";
+    data:jk "Laki-laki";
+    data:npm "141010190077";
+    data:prodi "Aktuaria";
+    data:angkatan "2019";
+    data:ttlLahir "Bojong,  27 Mei 2001";
+    data:agama "Islam";
+    data:email "sadilmi@gmail.com";
+    data:alamat "Jl Cicadas 99";
+    data:noHP "081310321652";
+    data:urlFoto "";
+    .
+
+data:29 rdf:type data:mahasiswa;
+    data:nama "Vivian Sandra";
+    data:jk "Perempuan";
+    data:npm "140310180079";
+    data:prodi "Fisika";
+    data:angkatan "2019";
+    data:ttlLahir "Bojong,  8 Desember 2001";
+    data:agama "Islam";
+    data:email "viviansandra@gmail.com";
+    data:alamat "Jl Cibaru 9";
+    data:noHP "087317862652";
+    data:urlFoto "";
+    .
+
+data:30 rdf:type data:mahasiswa;
+    data:nama "Devina Natapsya";
+    data:jk "Perempuan";
+    data:npm "140710180007";
+    data:prodi "Geofisika";
+    data:angkatan "2018";
+    data:ttlLahir "Bojong,  27 Agustus 2000";
+    data:agama "Islam";
+    data:email "Devina natapsya@gmail.com";
+    data:alamat "Jl Cimareme 27";
+    data:noHP "081310187654";
+    data:urlFoto "";
+    .
+data:31 rdf:type data:mahasiswa;
+    data:nama "Sandra Devi";
+    data:jk "Perempuan";
+    data:npm "140110190047";
+    data:prodi "Matematika";
+    data:angkatan "2019";
+    data:ttlLahir "Medan,  25 Desember 2001";
+    data:agama "Islam";
+    data:email "sandradevi@gmail.com";
+    data:alamat "Jl malangbong 29";
+    data:noHP "081376234652";
+    data:urlFoto "";
+    .
+
+data:32 rdf:type data:mahasiswa;
+    data:nama "Shadie Wijaya";
+    data:jk "Laki-laki";
+    data:npm "140110180031";
+    data:prodi "Matematika";
+    data:angkatan "2018";
+    data:ttlLahir "Jakarta,  23 Maret 2000";
+    data:agama "Islam";
+    data:email "captamerika@gmail.com";
+    data:alamat "Jl Cibubur 9";
+    data:noHP "081312123952";
+    data:urlFoto "";
+    .
+
+data:33 rdf:type data:mahasiswa;
+    data:nama "Nazmi Muhammad";
+    data:jk "Laki-laki";
+    data:npm "140810180037";
+    data:prodi "Teknik Informatika";
+    data:angkatan "2018";
+    data:ttlLahir "Bandung,  27 Desember 2000";
+    data:agama "Islam";
+    data:email "namuryfc@gmail.com";
+    data:alamat "Jl Cibiru 99";
+    data:noHP "087892337652";
+    data:urlFoto "";
+    .
+
+data:34 rdf:type data:mahasiswa;
+    data:nama "Muhammad Fahrul";
+    data:jk "Laki-laki";
+    data:npm "140810180027";
+    data:prodi "Teknik Informatika";
+    data:angkatan "2018";
+    data:ttlLahir "Bandung,  27 Juli 2000";
+    data:agama "Islam";
+    data:email "fictoriajr@gmail.com";
+    data:alamat "Jl Sukamiskin 29";
+    data:noHP "087892387291";
+    data:urlFoto "";
+    .
+
+data:35 rdf:type data:mahasiswa;
+    data:nama "Adipati Maaruf";
+    data:jk "Laki-laki";
+    data:npm "140910180023";
+    data:prodi "Teknik Elektro";
+    data:angkatan "2018";
+    data:ttlLahir "Bandung,  18 Januari 2000";
+    data:agama "Islam";
+    data:email "adipatidolken@gmail.com";
+    data:alamat "Jl Cibiru 25";
+    data:noHP "087892153652";
+    data:urlFoto "";
+    .
+
+data:36 rdf:type data:mahasiswa;
+    data:nama "Bandana Irmal A";
+    data:jk "Laki-laki";
+    data:npm "140810180025";
+    data:prodi "Teknik Informatika";
+    data:angkatan "2018";
+    data:ttlLahir "Cimahi,  27 September 2000";
+    data:agama "Islam";
+    data:email "biabanana@gmail.com";
+    data:alamat "Jl Permana 11";
+    data:noHP "08789113127";
+    data:urlFoto "";
+    .
+
+data:37 rdf:type data:mahasiswa;
+    data:nama "Muhammad Hafidh";
+    data:jk "Laki-laki";
+    data:npm "140810180061";
+    data:prodi "Teknik Informatika";
+    data:angkatan "2018";
+    data:ttlLahir "Bogor,  27 Juli 1999";
+    data:agama "Islam";
+    data:email "akdhnand@gmail.com";
+    data:alamat "Jl bogor 9";
+    data:noHP "081242337652";
+    data:urlFoto "";
+    .
+
+data:38 rdf:type data:mahasiswa;
+    data:nama "Nurul Maaruf";
+    data:jk "Laki-laki";
+    data:npm "140910180053";
+    data:prodi "Teknik Elektro";
+    data:angkatan "2018";
+    data:ttlLahir "Bandung,  12 Januari 2000";
+    data:agama "Islam";
+    data:email "maarufnurul@gmail.com";
+    data:alamat "Jl Cibiru 5";
+    data:noHP "087908723652";
+    data:urlFoto "";
+    .
+
+data:39 rdf:type data:mahasiswa;
+    data:nama "Ariful Nopal";
+    data:jk "Laki-laki";
+    data:npm "140110190055";
+    data:prodi "Matematika";
+    data:angkatan "2019";
+    data:ttlLahir "Depok,  11 Januari 2000";
+    data:agama "Islam";
+    data:email "nopalariful@gmail.com";
+    data:alamat "Jl Cilegon 15";
+    data:noHP "087898736652";
+    data:urlFoto "";
+    .
+
+data:40 rdf:type data:mahasiswa;
+    data:nama "Ajani Rapia";
+    data:jk "Perempuan";
+    data:npm "140910180053";
+    data:prodi "Teknik Elektro";
+    data:angkatan "2018";
+    data:ttlLahir "Bandung,  1 November 2000";
+    data:agama "Islam";
+    data:email "adipatidolken@gmail.com";
+    data:alamat "Jl Cimareme 2";
+    data:noHP "087892212472";
+    data:urlFoto "";
+
