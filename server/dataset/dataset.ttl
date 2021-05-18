@@ -12,7 +12,7 @@ data:1 rdf:type data:mahasiswa;
     data:email "mustopa.sina@gmail.com";
     data:alamat "Jl Bogor";
     data:noHP "081289725836";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1606106040060-3c4322aaecda?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80";
     .
 
 data:2 rdf:type data:mahasiswa;
@@ -26,7 +26,7 @@ data:2 rdf:type data:mahasiswa;
     data:email "alfian@gmail.com";
     data:alamat "Jl Cimahi";
     data:noHP "081112123499";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1612230337141-903f3d330055?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80";
     .
 
 data:3 rdf:type data:mahasiswa;
@@ -40,7 +40,7 @@ data:3 rdf:type data:mahasiswa;
     data:email "sheila@gmail.com";
     data:alamat "Jl Majalengka timur";
     data:noHP "08111212119";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1620416127728-e8afbf96def5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80";
     .
 
 data:4 rdf:type data:mahasiswa;
@@ -54,7 +54,7 @@ data:4 rdf:type data:mahasiswa;
     data:email "ufairoh@gmail.com";
     data:alamat "Jl Purwakarta 5";
     data:noHP "08111211234";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1612115958726-9af4b6bd28d1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80";
     .
 
 data:5 rdf:type data:mahasiswa;
@@ -68,7 +68,7 @@ data:5 rdf:type data:mahasiswa;
     data:email "fauzan@gmail.com";
     data:alamat "Jl Parung";
     data:noHP "08826284129";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1501027874987-73e9c32f46a0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80";
     .
 
 data:6 rdf:type data:mahasiswa;
@@ -82,7 +82,7 @@ data:6 rdf:type data:mahasiswa;
     data:email "primab@gmail.com";
     data:alamat "Jl Ciletuh";
     data:noHP "08826284126";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1511982742164-ba5f08b0796c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=658&q=80";
     .
 
 data:7 rdf:type data:mahasiswa;
@@ -96,7 +96,7 @@ data:7 rdf:type data:mahasiswa;
     data:email "kartika.a@gmail.com";
     data:alamat "Jl Center Park";
     data:noHP "08826284111";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1605677677382-8baa24578e08?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80";
     .
 
 data:8 rdf:type data:mahasiswa;
@@ -110,7 +110,7 @@ data:8 rdf:type data:mahasiswa;
     data:email "malik.fah@gmail.com";
     data:alamat "Jl Kencana";
     data:noHP "08826284112";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1620781245642-7f5bc98987b1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80";
     .
 
 data:9 rdf:type data:mahasiswa;
@@ -124,7 +124,7 @@ data:9 rdf:type data:mahasiswa;
     data:email "kevyosa@gmail.com";
     data:alamat "Jl Bumikiara";
     data:noHP "08826223111";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1620399909663-b7a7da934161?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80";
     .
 
 data:10 rdf:type data:mahasiswa;
@@ -138,7 +138,7 @@ data:10 rdf:type data:mahasiswa;
     data:email "chandral@gmail.com";
     data:alamat "Jl kencana 4";
     data:noHP "08826211111";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80";
     .
 
 
@@ -154,7 +154,7 @@ data:11 rdf:type data:mahasiswa;
     data:email "ymiami@gmail.com";
     data:alamat "Jl kencana 10 Klaten";
     data:noHP "08831211111";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1620188375543-3361033394a3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80";
     .
 
 data:12 rdf:type data:mahasiswa;
@@ -168,7 +168,7 @@ data:12 rdf:type data:mahasiswa;
     data:email "shincan@gmail.com";
     data:alamat "Grogol Timu 64";
     data:noHP "08831213511";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1597774293578-9acb2af2cbb7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80";
     .
 
 data:13 rdf:type data:mahasiswa;
@@ -182,7 +182,7 @@ data:13 rdf:type data:mahasiswa;
     data:email "deadewi@gmail.com";
     data:alamat "Jl Sukarno Hatta 5";
     data:noHP "08839013511";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1560261172-625fb59399fc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80";
     .
 
 data:14 rdf:type data:mahasiswa;
@@ -196,7 +196,7 @@ data:14 rdf:type data:mahasiswa;
     data:email "davidhut@gmail.com";
     data:alamat "Jl Medan Panjang 11";
     data:noHP "08839011811";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fHBvcnRyYWl0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80";
     .
 
 data:15 rdf:type data:mahasiswa;
@@ -210,7 +210,7 @@ data:15 rdf:type data:mahasiswa;
     data:email "cintya_r@gmail.com";
     data:alamat "Jl Sudirman 11";
     data:noHP "08839011801";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1561637235-895323c40053?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=676&q=80";
     .
 
 data:16 rdf:type data:mahasiswa;
@@ -224,7 +224,7 @@ data:16 rdf:type data:mahasiswa;
     data:email "hanizi@gmail.com";
     data:alamat "Jl Depok baru 99";
     data:noHP "08129014401";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1620285327296-f71539979743?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=677&q=80";
     .
 
 data:17 rdf:type data:mahasiswa;
@@ -238,7 +238,7 @@ data:17 rdf:type data:mahasiswa;
     data:email "madecantika@gmail.com";
     data:alamat "Jl Denpasar 18";
     data:noHP "081290132091";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1620935900933-2aadcf017c7a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80";
     .
 
 data:18 rdf:type data:mahasiswa;
@@ -252,7 +252,7 @@ data:18 rdf:type data:mahasiswa;
     data:email "naufals@gmail.com";
     data:alamat "Jl Kota tua 21";
     data:noHP "081290132145";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1548611307-d1a4c28832b0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=966&q=80";
     .
 
 data:19 rdf:type data:mahasiswa;
@@ -266,7 +266,7 @@ data:19 rdf:type data:mahasiswa;
     data:email "gilberteins@gmail.com";
     data:alamat "Jl Klaten Baru 54";
     data:noHP "081310132145";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1619887741454-39af865fc296?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80";
     .
 
 data:20 rdf:type data:mahasiswa;
@@ -280,7 +280,7 @@ data:20 rdf:type data:mahasiswa;
     data:email "akbarmus@gmail.com";
     data:alamat "Jl Cibatu Indah 88";
     data:noHP "081310132343";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1619971066172-7a4ddeed410f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80";
     .
 
 
@@ -296,7 +296,7 @@ data:21 rdf:type data:mahasiswa;
     data:email "viviandevi@gmail.com";
     data:alamat "Jl Cicurug 99";
     data:noHP "081310137652";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1620736214028-b3bab8e20aab?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80";
 .
 
 data:22 rdf:type data:mahasiswa;
@@ -310,7 +310,7 @@ data:22 rdf:type data:mahasiswa;
     data:email "alselnap@gmail.com";
     data:alamat "Jl Cikeruh 80";
     data:noHP "08131013550";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1620915789354-8558b87424d1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=630&q=80";
     .
 
 data:23 rdf:type data:mahasiswa;
@@ -324,7 +324,7 @@ data:23 rdf:type data:mahasiswa;
     data:email "sharasnhi@gmail.com";
     data:alamat "Jl Cimanggu 91";
     data:noHP "089310237652";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1606726712298-a9d14f8297a0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=658&q=80";
     .
 
 data:24 rdf:type data:mahasiswa;
@@ -338,7 +338,7 @@ data:24 rdf:type data:mahasiswa;
     data:email "reynavalorant@gmail.com";
     data:alamat "Jl gatsu 19";
     data:noHP "08932327652";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1620001484744-0c6264a98550?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80";
     .
 
 data:25 rdf:type data:mahasiswa;
@@ -352,7 +352,7 @@ data:25 rdf:type data:mahasiswa;
     data:email "marvelcpti@gmail.com";
     data:alamat "Jl Cicurug 29";
     data:noHP "081378937752";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1523710573464-368e67e0d62c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80";
     .
 
 data:26 rdf:type data:mahasiswa;
@@ -366,7 +366,7 @@ data:26 rdf:type data:mahasiswa;
     data:email "miesedap2@gmail.com";
     data:alamat "Jl Cimangu 99";
     data:noHP "087310329152";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1586682643135-060f061868b6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=620&q=80";
 .
 
 data:27 rdf:type data:mahasiswa;
@@ -380,7 +380,7 @@ data:27 rdf:type data:mahasiswa;
     data:email "sandyawan@gmail.com";
     data:alamat "Jl Cibeber 99";
     data:noHP "081314231652";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1617355453845-6996ffeee4de?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=658&q=80";
     .
 
 data:28 rdf:type data:mahasiswa;
@@ -394,7 +394,7 @@ data:28 rdf:type data:mahasiswa;
     data:email "sadilmi@gmail.com";
     data:alamat "Jl Cicadas 99";
     data:noHP "081310321652";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1588701107566-af76b932e2e8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80";
     .
 
 data:29 rdf:type data:mahasiswa;
@@ -408,7 +408,7 @@ data:29 rdf:type data:mahasiswa;
     data:email "viviansandra@gmail.com";
     data:alamat "Jl Cibaru 9";
     data:noHP "087317862652";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1619107822338-82d8513cd25c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80";
     .
 
 data:30 rdf:type data:mahasiswa;
@@ -422,7 +422,7 @@ data:30 rdf:type data:mahasiswa;
     data:email "Devina natapsya@gmail.com";
     data:alamat "Jl Cimareme 27";
     data:noHP "081310187654";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1562555579-e73e8764670a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80";
     .
 data:31 rdf:type data:mahasiswa;
     data:nama "Sandra Devi";
@@ -435,7 +435,7 @@ data:31 rdf:type data:mahasiswa;
     data:email "sandradevi@gmail.com";
     data:alamat "Jl malangbong 29";
     data:noHP "081376234652";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1620761927720-10a8bec41b74?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80";
     .
 
 data:32 rdf:type data:mahasiswa;
@@ -449,7 +449,7 @@ data:32 rdf:type data:mahasiswa;
     data:email "captamerika@gmail.com";
     data:alamat "Jl Cibubur 9";
     data:noHP "081312123952";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1592771385918-90eeffa48baf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80";
     .
 
 data:33 rdf:type data:mahasiswa;
@@ -463,7 +463,7 @@ data:33 rdf:type data:mahasiswa;
     data:email "namuryfc@gmail.com";
     data:alamat "Jl Cibiru 99";
     data:noHP "087892337652";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1612214070475-1e73f478188c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80";
     .
 
 data:34 rdf:type data:mahasiswa;
@@ -477,7 +477,7 @@ data:34 rdf:type data:mahasiswa;
     data:email "fictoriajr@gmail.com";
     data:alamat "Jl Sukamiskin 29";
     data:noHP "087892387291";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1512850692650-c382e34f7fb2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=704&q=80";
     .
 
 data:35 rdf:type data:mahasiswa;
@@ -491,7 +491,7 @@ data:35 rdf:type data:mahasiswa;
     data:email "adipatidolken@gmail.com";
     data:alamat "Jl Cibiru 25";
     data:noHP "087892153652";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1544159729-c9380464148c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDIxOXx0b3dKWkZza3BHZ3x8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60";
     .
 
 data:36 rdf:type data:mahasiswa;
@@ -505,7 +505,7 @@ data:36 rdf:type data:mahasiswa;
     data:email "biabanana@gmail.com";
     data:alamat "Jl Permana 11";
     data:noHP "08789113127";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1618922752011-f2eb1e8b3f20?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80";
     .
 
 data:37 rdf:type data:mahasiswa;
@@ -519,7 +519,7 @@ data:37 rdf:type data:mahasiswa;
     data:email "akdhnand@gmail.com";
     data:alamat "Jl bogor 9";
     data:noHP "081242337652";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1618769122190-ee85526fd40b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80";
     .
 
 data:38 rdf:type data:mahasiswa;
@@ -533,7 +533,7 @@ data:38 rdf:type data:mahasiswa;
     data:email "maarufnurul@gmail.com";
     data:alamat "Jl Cibiru 5";
     data:noHP "087908723652";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1588946653163-7c781a0f6702?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80";
     .
 
 data:39 rdf:type data:mahasiswa;
@@ -547,7 +547,7 @@ data:39 rdf:type data:mahasiswa;
     data:email "nopalariful@gmail.com";
     data:alamat "Jl Cilegon 15";
     data:noHP "087898736652";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1542973748-658653fb3d12?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=633&q=80";
     .
 
 data:40 rdf:type data:mahasiswa;
@@ -561,5 +561,5 @@ data:40 rdf:type data:mahasiswa;
     data:email "adipatidolken@gmail.com";
     data:alamat "Jl Cimareme 2";
     data:noHP "087892212472";
-    data:urlFoto "";
+    data:urlFoto "https://images.unsplash.com/photo-1616902599633-ebde6959ad85?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80";
 
