@@ -31,10 +31,20 @@ const useStyles2 = makeStyles((theme) => ({
 export default function AdminNavbarLinks() {
   const classes = useStyles();
   const classes2 = useStyles2();
+  const [disable, setDisable] = useState({
+    name: true,
+    prodi: true,
+    angkatan: true,
+  });
   const [inputForAll, setInputForAll] = useState(null);
   const [inputData, setInputData] = useState(null);
   const [dataProdi, setDataProdi] = useState(null);
   const [dataAngkatan, setDataAngakatan] = useState(null);
+  const [isGoing, setIsGoing] = useState({
+    name: false,
+    prodi: false,
+    angkatan: false,
+  });
   const [modal, setModal] = useState(false);
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
@@ -48,6 +58,31 @@ export default function AdminNavbarLinks() {
   };
   const toggle = () => {
     setModal(!modal);
+  };
+  const setCheckBox = (e) => {
+    const name = e.target.name;
+    const target = e.target;
+    const value = target.type === "checkbox" ? target.checked : target.value;
+
+    if (name === "namaMahasiswa") {
+      setIsGoing({ ...value }, value);
+      setDisable({ ...disable, name: !disable.name });
+      if (value === false) {
+        setInputData("");
+      }
+    } else if (name === "prodi") {
+      setIsGoing({ ...value }, value);
+      setDisable({ ...disable, prodi: !disable.prodi });
+      if (value === false) {
+        setDataProdi(null);
+      }
+    } else {
+      setIsGoing({ ...value }, value);
+      setDisable({ ...disable, angkatan: !disable.angkatan });
+      if (value === false) {
+        setDataAngakatan(null);
+      }
+    }
   };
 
   const buttonHandlerBasic = () => {
@@ -139,67 +174,118 @@ export default function AdminNavbarLinks() {
               </div>
               <div>
                 <ModalBody className="d-flex flex-column">
-                  <TextField
-                    className="mx-2"
-                    label="Nama Mahasiswa"
-                    inputProps={{
-                      placeholder: "Nama Mahasiswa",
-                      inputProps: {
-                        "aria-label": "Search",
-                      },
-                      value: inputData,
-                      onChange: (e) => setInputData(e.target.value),
-                    }}
-                  />
-                  <FormControl className={classes2.formControl}>
-                    <InputLabel id="demo-simple-select-helper-label">
-                      Program Studi
-                    </InputLabel>
-                    <Select
-                      labelId="demo-simple-select-helper-label"
-                      id="demo-simple-select-helper"
-                      value={dataProdi}
-                      onChange={(e) => setDataProdi(e.target.value)}
+                  <div className="d-flex">
+                    <div className="form-check form-check-inline">
+                      <input
+                        name="namaMahasiswa"
+                        checked={isGoing.name}
+                        className="form-check-input"
+                        type="checkbox"
+                        id="inlineCheckbox1"
+                        defaultValue="option1"
+                        onChange={setCheckBox}
+                      />
+                    </div>
+                    <TextField
+                      style={{ width: "100%" }}
+                      disabled={disable.name}
+                      className="mx-2"
+                      label="Nama Mahasiswa"
+                      inputProps={{
+                        placeholder: "Nama Mahasiswa",
+                        inputProps: {
+                          "aria-label": "Search",
+                        },
+                        value: inputData,
+                        onChange: (e) => setInputData(e.target.value),
+                      }}
+                    />
+                  </div>
+                  <div className="d-flex">
+                    <div className="form-check form-check-inline">
+                      <input
+                        name="prodi"
+                        checked={isGoing.prodi}
+                        className="form-check-input"
+                        type="checkbox"
+                        id="inlineCheckbox1"
+                        defaultValue="option1"
+                        onChange={setCheckBox}
+                      />
+                    </div>
+                    <FormControl
+                      style={{ width: "100%" }}
+                      className={classes2.formControl}
                     >
-                      <MenuItem value="">
-                        <em>None</em>
-                      </MenuItem>
-                      <MenuItem value={"Teknik Informatika"}>
-                        Teknik Informatika
-                      </MenuItem>
-                      <MenuItem value={"Biologi"}>Biologi</MenuItem>
-                      <MenuItem value={"Matematika"}>Matematika</MenuItem>
-                      <MenuItem value={"Geofisika"}>Geofisika</MenuItem>
-                      <MenuItem value={"Aktuaria"}>Aktuaria</MenuItem>
-                      <MenuItem value={"Teknik Elektro"}>
-                        Teknik Elektro
-                      </MenuItem>
-                      <MenuItem value={"Fisika"}>Fisika</MenuItem>
-                      <MenuItem value={"Biologi"}>Biologi</MenuItem>
-                      <MenuItem value={"Teknik Elektro"}>
-                        Teknik Elektro
-                      </MenuItem>
-                    </Select>
-                  </FormControl>
-                  <FormControl className={classes2.formControl}>
-                    <InputLabel id="demo-simple-select-helper-label">
-                      Angkatan
-                    </InputLabel>
-                    <Select
-                      labelId="demo-simple-select-helper-label"
-                      id="demo-simple-select-helper"
-                      value={dataAngkatan}
-                      onChange={(e) => setDataAngakatan(e.target.value)}
+                      <InputLabel id="demo-simple-select-helper-label">
+                        Program Studi
+                      </InputLabel>
+
+                      <Select
+                        disabled={disable.prodi}
+                        labelId="demo-simple-select-helper-label"
+                        id="demo-simple-select-helper"
+                        value={dataProdi}
+                        onChange={(e) => setDataProdi(e.target.value)}
+                      >
+                        <MenuItem value="">
+                          <em>None</em>
+                        </MenuItem>
+                        <MenuItem value={"Teknik Informatika"}>
+                          Teknik Informatika
+                        </MenuItem>
+                        <MenuItem value={"Biologi"}>Biologi</MenuItem>
+                        <MenuItem value={"Matematika"}>Matematika</MenuItem>
+                        <MenuItem value={"Geofisika"}>Geofisika</MenuItem>
+                        <MenuItem value={"Aktuaria"}>Aktuaria</MenuItem>
+                        <MenuItem value={"Teknik Elektro"}>
+                          Teknik Elektro
+                        </MenuItem>
+                        <MenuItem value={"Fisika"}>Fisika</MenuItem>
+                        <MenuItem value={"Biologi"}>Biologi</MenuItem>
+                        <MenuItem value={"Teknik Elektro"}>
+                          Teknik Elektro
+                        </MenuItem>
+                      </Select>
+                    </FormControl>
+                  </div>
+                  <div className="d-flex">
+                    <div className="form-check form-check-inline">
+                      <input
+                        name="angkatan"
+                        checked={isGoing.angkatan}
+                        className="form-check-input"
+                        type="checkbox"
+                        id="inlineCheckbox1"
+                        defaultValue="option1"
+                        onChange={setCheckBox}
+                      />
+                    </div>
+                    <FormControl
+                      style={{ width: "100%" }}
+                      className={classes2.formControl}
                     >
-                      <MenuItem value="">
-                        <em>None</em>
-                      </MenuItem>
-                      <MenuItem value={"2018"}>2018</MenuItem>
-                      <MenuItem value={"2019"}>2019</MenuItem>
-                      <MenuItem value={"2020"}>2020</MenuItem>
-                      <MenuItem value={"2021"}>2021</MenuItem>
-                    </Select>
-                  </FormControl>
+                      <InputLabel id="demo-simple-select-helper-label">
+                        Angkatan
+                      </InputLabel>
+
+                      <Select
+                        disabled={disable.angkatan}
+                        labelId="demo-simple-select-helper-label"
+                        id="demo-simple-select-helper"
+                        value={dataAngkatan}
+                        onChange={(e) => setDataAngakatan(e.target.value)}
+                      >
+                        <MenuItem value="">
+                          <em>None</em>
+                        </MenuItem>
+                        <MenuItem value={"2018"}>2018</MenuItem>
+                        <MenuItem value={"2019"}>2019</MenuItem>
+                        <MenuItem value={"2020"}>2020</MenuItem>
+                        <MenuItem value={"2021"}>2021</MenuItem>
+                      </Select>
+                    </FormControl>
+                  </div>
                 </ModalBody>
                 <ModalFooter>
                   <Button2
