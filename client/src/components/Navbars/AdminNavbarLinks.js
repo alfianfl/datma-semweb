@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Search from "@material-ui/icons/Search";
 // core components
 import CustomInput from "components/CustomInput/CustomInput.js";
@@ -10,7 +10,12 @@ import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+import Paper from "@material-ui/core/Paper";
+import Tabs from "@material-ui/core/Tabs";
+import Tab from "@material-ui/core/Tab";
+import SwipeableViews from "react-swipeable-views";
+import TextField from "@material-ui/core/TextField";
+import { Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
 const useStyles = makeStyles(styles);
 
@@ -24,17 +29,31 @@ const useStyles2 = makeStyles((theme) => ({
   },
 }));
 export default function AdminNavbarLinks() {
+  const classes = useStyles();
   const classes2 = useStyles2();
+  const [inputForAll, setInputForAll] = useState(null);
   const [inputData, setInputData] = useState(null);
   const [dataProdi, setDataProdi] = useState(null);
   const [dataAngkatan, setDataAngakatan] = useState(null);
   const [modal, setModal] = useState(false);
+  const theme = useTheme();
+  const [value, setValue] = React.useState(0);
 
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  const handleChangeIndex = (index) => {
+    setValue(index);
+  };
   const toggle = () => {
     setModal(!modal);
   };
 
-  const buttonHandler = () => {
+  const buttonHandlerBasic = () => {
+    window.location.href = "hasilPencarian?query=" + inputForAll;
+  };
+  const buttonHandlerAdvanced = (e) => {
     if (inputData != null) {
       if (inputData != null && dataProdi != null && dataAngkatan != null) {
         window.location.href =
@@ -65,8 +84,6 @@ export default function AdminNavbarLinks() {
     }
   };
 
-  const classes = useStyles();
-
   return (
     <div>
       <button onClick={toggle} href="#" className="btn btn-primary btn-search ">
@@ -74,81 +91,131 @@ export default function AdminNavbarLinks() {
       </button>
       <div className={classes.searchWrapper}>
         <Modal isOpen={modal} toggle={toggle}>
-          <ModalHeader toggle={toggle}>
-            {" "}
-            <strong className="text-center">Informasi Mahasiswa</strong>{" "}
-          </ModalHeader>
-          <ModalBody className="d-flex flex-column">
-            <CustomInput
-              formControlProps={{
-                className: classes.margin + " " + classes.search,
-              }}
-              inputProps={{
-                placeholder: "Nama Mahasiswa",
-                inputProps: {
-                  "aria-label": "Search",
-                },
-                value: inputData,
-                onChange: (e) => setInputData(e.target.value),
-              }}
-            />
-            <FormControl className={classes2.formControl}>
-              <InputLabel id="demo-simple-select-helper-label">
-                Program Studi
-              </InputLabel>
-              <Select
-                labelId="demo-simple-select-helper-label"
-                id="demo-simple-select-helper"
-                value={dataProdi}
-                onChange={(e) => setDataProdi(e.target.value)}
-              >
-                <MenuItem value="">
-                  <em>None</em>
-                </MenuItem>
-                <MenuItem value={"Teknik Informatika"}>
-                  Teknik Informatika
-                </MenuItem>
-                <MenuItem value={"Biologi"}>Biologi</MenuItem>
-                <MenuItem value={"Matematika"}>Matematika</MenuItem>
-                <MenuItem value={"Geofisika"}>Geofisika</MenuItem>
-                <MenuItem value={"Aktuaria"}>Aktuaria</MenuItem>
-                <MenuItem value={"Teknik Elektro"}>Teknik Elektro</MenuItem>
-                <MenuItem value={"Fisika"}>Fisika</MenuItem>
-                <MenuItem value={"Biologi"}>Biologi</MenuItem>
-                <MenuItem value={"Teknik Elektro"}>Teknik Elektro</MenuItem>
-              </Select>
-            </FormControl>
-            <FormControl className={classes2.formControl}>
-              <InputLabel id="demo-simple-select-helper-label">
-                Angkatan
-              </InputLabel>
-              <Select
-                labelId="demo-simple-select-helper-label"
-                id="demo-simple-select-helper"
-                value={dataAngkatan}
-                onChange={(e) => setDataAngakatan(e.target.value)}
-              >
-                <MenuItem value="">
-                  <em>None</em>
-                </MenuItem>
-                <MenuItem value={"2018"}>2018</MenuItem>
-                <MenuItem value={"2019"}>2019</MenuItem>
-                <MenuItem value={"2020"}>2020</MenuItem>
-                <MenuItem value={"2021"}>2021</MenuItem>
-              </Select>
-            </FormControl>
-          </ModalBody>
-          <ModalFooter>
-            <Button2
-              onClick={buttonHandler}
-              color="white"
-              aria-label="edit"
-              justIcon
-              round
+          <Paper className={classes.root}>
+            <Tabs
+              value={value}
+              onChange={handleChange}
+              indicatorColor="primary"
+              textColor="primary"
+              centered
             >
-              <Search />
-            </Button2>
-          </ModalFooter>
+              <Tab label="Basic Search" />
+              <Tab label="Advanced Search" />
+            </Tabs>
+          </Paper>
+
+          <div className={classes.root}>
+            <SwipeableViews
+              axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+              index={value}
+              onChangeIndex={handleChangeIndex}
+            >
+              <div style={{ padding: 8 }}>
+                {" "}
+                <ModalBody className="d-flex flex-column">
+                  <TextField
+                    id="standard-full-width"
+                    label="Informasi mahasiswa"
+                    placeholder="Search"
+                    fullWidth
+                    margin="normal"
+                    InputLabelProps={{
+                      shrink: true,
+                    }}
+                    value={inputForAll}
+                    onChange={(e) => setInputForAll(e.target.value)}
+                  />
+                  <Button2
+                    style={{ alignSelf: "flex-end" }}
+                    onClick={buttonHandlerBasic}
+                    color="white"
+                    aria-label="edit"
+                    justIcon
+                    round
+                  >
+                    <Search />
+                  </Button2>
+                </ModalBody>
+              </div>
+              <div>
+                <ModalBody className="d-flex flex-column">
+                  <TextField
+                    className="mx-2"
+                    label="Nama Mahasiswa"
+                    inputProps={{
+                      placeholder: "Nama Mahasiswa",
+                      inputProps: {
+                        "aria-label": "Search",
+                      },
+                      value: inputData,
+                      onChange: (e) => setInputData(e.target.value),
+                    }}
+                  />
+                  <FormControl className={classes2.formControl}>
+                    <InputLabel id="demo-simple-select-helper-label">
+                      Program Studi
+                    </InputLabel>
+                    <Select
+                      labelId="demo-simple-select-helper-label"
+                      id="demo-simple-select-helper"
+                      value={dataProdi}
+                      onChange={(e) => setDataProdi(e.target.value)}
+                    >
+                      <MenuItem value="">
+                        <em>None</em>
+                      </MenuItem>
+                      <MenuItem value={"Teknik Informatika"}>
+                        Teknik Informatika
+                      </MenuItem>
+                      <MenuItem value={"Biologi"}>Biologi</MenuItem>
+                      <MenuItem value={"Matematika"}>Matematika</MenuItem>
+                      <MenuItem value={"Geofisika"}>Geofisika</MenuItem>
+                      <MenuItem value={"Aktuaria"}>Aktuaria</MenuItem>
+                      <MenuItem value={"Teknik Elektro"}>
+                        Teknik Elektro
+                      </MenuItem>
+                      <MenuItem value={"Fisika"}>Fisika</MenuItem>
+                      <MenuItem value={"Biologi"}>Biologi</MenuItem>
+                      <MenuItem value={"Teknik Elektro"}>
+                        Teknik Elektro
+                      </MenuItem>
+                    </Select>
+                  </FormControl>
+                  <FormControl className={classes2.formControl}>
+                    <InputLabel id="demo-simple-select-helper-label">
+                      Angkatan
+                    </InputLabel>
+                    <Select
+                      labelId="demo-simple-select-helper-label"
+                      id="demo-simple-select-helper"
+                      value={dataAngkatan}
+                      onChange={(e) => setDataAngakatan(e.target.value)}
+                    >
+                      <MenuItem value="">
+                        <em>None</em>
+                      </MenuItem>
+                      <MenuItem value={"2018"}>2018</MenuItem>
+                      <MenuItem value={"2019"}>2019</MenuItem>
+                      <MenuItem value={"2020"}>2020</MenuItem>
+                      <MenuItem value={"2021"}>2021</MenuItem>
+                    </Select>
+                  </FormControl>
+                </ModalBody>
+                <ModalFooter>
+                  <Button2
+                    onClick={buttonHandlerAdvanced}
+                    color="white"
+                    aria-label="edit"
+                    justIcon
+                    round
+                    name="advancedSearch"
+                  >
+                    <Search />
+                  </Button2>
+                </ModalFooter>
+              </div>
+            </SwipeableViews>
+          </div>
         </Modal>
       </div>
     </div>

@@ -19,6 +19,7 @@ import GridContainer from "components/Grid/GridContainer.js";
 export default function HasilPencarian(props) {
   const [modal, setModal] = useState(false);
   const [data, setData] = useState([]);
+  const [dummy, setDummy] = useState(false);
   const [mahasiswa, setMahasiswa] = useState([]);
 
   const toggle = (npm) => {
@@ -39,91 +40,144 @@ export default function HasilPencarian(props) {
     let params = queryString.parse(path);
     console.log(params.prodi);
 
-    if (params.nama) {
-      if (params.nama && params.prodi && params.angkatan) {
-        axios
-          .get(
-            `http://localhost:5000/api/datma/?nama=${params.nama}&prodi=${params.prodi}&angkatan=${params.angkatan}`
-          )
-          .then((response) => {
-            console.log(response.data.data);
-            setData(response.data.data);
-          })
-          .catch((err) => {
-            console.log(err);
-          });
-      } else if (params.nama && params.prodi) {
-        axios
-          .get(
-            `http://localhost:5000/api/datma/?nama=${params.nama}&prodi=${params.prodi}`
-          )
-          .then((response) => {
-            console.log(response.data.data);
-            setData(response.data.data);
-          })
-          .catch((err) => {
-            console.log(err);
-          });
-      } else if (params.nama && params.angkatan) {
-        axios
-          .get(
-            `http://localhost:5000/api/datma/?nama=${params.nama}&angkatan=${params.angkatan}`
-          )
-          .then((response) => {
-            console.log(response.data.data);
-            setData(response.data.data);
-          })
-          .catch((err) => {
-            console.log(err);
-          });
-      } else {
-        const url1 = `http://localhost:5000/api/datma/?nama=${params.nama}`;
-        axios
-          .get(url1)
-          .then((response) => {
-            console.log(response.data.data);
-            setData(response.data.data);
-          })
-          .catch((err) => {
-            console.log(err);
-          });
-      }
-    } else if (params.prodi) {
-      if (params.prodi && params.angkatan) {
-        axios
-          .get(
-            `http://localhost:5000/api/datma/?prodi=${params.prodi}&angkatan=${params.angkatan}`
-          )
-          .then((response) => {
-            console.log(response.data.data);
-            setData(response.data.data);
-          })
-          .catch((err) => {
-            console.log(err);
-          });
-      } else {
-        const url2 = `http://localhost:5000/api/datma/?prodi=${params.prodi}`;
-        axios
-          .get(url2)
-          .then((response) => {
-            console.log(response.data.data);
-            setData(response.data.data);
-          })
-          .catch((err) => {
-            console.log(err);
-          });
-      }
-    } else if (params.angkatan) {
-      const url3 = `http://localhost:5000/api/datma/?angkatan=${params.angkatan}`;
+    if (params.query) {
       axios
-        .get(url3)
+        .get(`http://localhost:5000/api/datma/?nama=${params.query}`)
         .then((response) => {
-          console.log(response.data.data);
-          setData(response.data.data);
+          console.log();
+          if (response.data.message === "Show all Data Mahasiswa") {
+            setData(response.data.data);
+          } else {
+            setDummy(response.data.data);
+          }
         })
         .catch((err) => {
           console.log(err);
         });
+      axios
+        .get(`http://localhost:5000/api/datma/?agama=${params.query}`)
+        .then((response) => {
+          console.log();
+          if (response.data.message === "Show all Data Mahasiswa") {
+            setData(response.data.data);
+          } else {
+            setDummy(response.data.data);
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      axios
+        .get(`http://localhost:5000/api/datma/?prodi=${params.query}`)
+        .then((response) => {
+          if (response.data.message === "Show all Data Mahasiswa") {
+            setData(response.data.data);
+          } else {
+            setDummy(response.data.data);
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      axios
+        .get(`http://localhost:5000/api/datma/?angkatan=${params.query}`)
+        .then((response) => {
+          if (response.data.message === "Show all Data Mahasiswa") {
+            setData(response.data.data);
+          } else {
+            setDummy(response.data.data);
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    } else {
+      if (params.nama) {
+        if (params.nama && params.prodi && params.angkatan) {
+          axios
+            .get(
+              `http://localhost:5000/api/datma/?nama=${params.nama}&prodi=${params.prodi}&angkatan=${params.angkatan}`
+            )
+            .then((response) => {
+              console.log(response.data.data);
+              setData(response.data.data);
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        } else if (params.nama && params.prodi) {
+          axios
+            .get(
+              `http://localhost:5000/api/datma/?nama=${params.nama}&prodi=${params.prodi}`
+            )
+            .then((response) => {
+              console.log(response.data.data);
+              setData(response.data.data);
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        } else if (params.nama && params.angkatan) {
+          axios
+            .get(
+              `http://localhost:5000/api/datma/?nama=${params.nama}&angkatan=${params.angkatan}`
+            )
+            .then((response) => {
+              console.log(response.data.data);
+              setData(response.data.data);
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        } else {
+          const url1 = `http://localhost:5000/api/datma/?nama=${params.nama}`;
+          axios
+            .get(url1)
+            .then((response) => {
+              console.log(response.data.data);
+              setData(response.data.data);
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        }
+      } else if (params.prodi) {
+        if (params.prodi && params.angkatan) {
+          axios
+            .get(
+              `http://localhost:5000/api/datma/?prodi=${params.prodi}&angkatan=${params.angkatan}`
+            )
+            .then((response) => {
+              console.log(response.data.data);
+              setData(response.data.data);
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        } else {
+          const url2 = `http://localhost:5000/api/datma/?prodi=${params.prodi}`;
+          axios
+            .get(url2)
+            .then((response) => {
+              console.log(response.data.data);
+              setData(response.data.data);
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        }
+      } else if (params.angkatan) {
+        const url3 = `http://localhost:5000/api/datma/?angkatan=${params.angkatan}`;
+        axios
+          .get(url3)
+          .then((response) => {
+            console.log(response.data.data);
+            setData(response.data.data);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
     }
   }, []);
 
@@ -242,7 +296,9 @@ export default function HasilPencarian(props) {
               </Button>
             </ModalFooter>
           </Modal>
-        ) : null}
+        ) : (
+          dummy
+        )}
       </div>
     </GridContainer>
   );
