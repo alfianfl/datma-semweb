@@ -250,6 +250,16 @@ export default function HasilPencarian(props) {
                 />
               </FormGroup>
               <FormGroup>
+                <Label for="exampleAngkatan">Angkatan</Label>
+                <Input
+                  disabled
+                  type="text"
+                  name="angkatan"
+                  id="exampleAngkatan"
+                  value={mahasiswa.angkatan}
+                />
+              </FormGroup>
+              <FormGroup>
                 <Label for="exampleNPM">NPM</Label>
                 <Input
                   disabled
