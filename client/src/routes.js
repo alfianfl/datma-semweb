@@ -1,7 +1,7 @@
 import LibraryBooks from "@material-ui/icons/LibraryBooks";
 // core components/views for Admin layout
-import TableList from "views/TableList/TableList.js";
-import Typography from "views/Typography/Typography.js";
+import DataList from "views/DataList/DataList.js";
+import AboutUs from "views/AboutUs/AboutUs.js";
 import HasilPencarian from "views/HasilPencarian/HasilPencarian";
 
 const dashboardRoutes = [
@@ -9,14 +9,14 @@ const dashboardRoutes = [
     path: "/dataMahasiswa",
     name: "Data Mahasiswa",
     icon: "content_paste",
-    component: TableList,
+    component: DataList,
     layout: "/admin",
   },
   {
     path: "/aboutUs",
     name: "About Us",
     icon: LibraryBooks,
-    component: Typography,
+    component: AboutUs,
     layout: "/admin",
   },
   {
