@@ -242,9 +242,9 @@ export default function AdminNavbarLinks() {
                           Teknik Elektro
                         </MenuItem>
                         <MenuItem value={"Fisika"}>Fisika</MenuItem>
-                        <MenuItem value={"Biologi"}>Biologi</MenuItem>
-                        <MenuItem value={"Teknik Elektro"}>
-                          Teknik Elektro
+                        <MenuItem value={"Statistika"}>Statistika</MenuItem>
+                        <MenuItem value={"Kimia"}>
+                          Kimia
                         </MenuItem>
                       </Select>
                     </FormControl>

@@ -4,6 +4,8 @@ import { makeStyles } from "@material-ui/core/styles";
 // core components
 import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
+import img from "./img/pop.JPG"
+import img2 from "./img/sm.JPG"
 
 const styles = {
   typo: {
@@ -46,8 +48,8 @@ const useStyles = makeStyles(styles);
 
 export default function TypographyPage() {
   const [team, setTeam] = useState([
-    { nama: "Alfian Fadhil Labib", NPM: "140810180055" },
-    { nama: "Sina Mustopa", NPM: "140810180017" },
+    { nama: "Alfian Fadhil Labib", NPM: "140810180055", img: img },
+    { nama: "Sina Mustopa", NPM: "140810180017", img: img2 },
   ]);
   const classes = useStyles();
   return (
@@ -64,7 +66,7 @@ export default function TypographyPage() {
           </p>
         </CardHeader>
       </Card>
-      <div className="container-fluid">
+      <div className="container-fluid my-5">
         <h1>Our Member</h1>
         <div className="row">
           {team.map((e) => (
@@ -72,9 +74,9 @@ export default function TypographyPage() {
               <div className="card mt-3 " style={{ width: "100%" }}>
                 <img
                   className="card-img-top"
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Hashimoto_Kanna_at_Opening_Ceremony_of_the_Tokyo_International_Film_Festival_2017_(26331546998).jpg/1200px-Hashimoto_Kanna_at_Opening_Ceremony_of_the_Tokyo_International_Film_Festival_2017_(26331546998).jpg"
+                  src={e.img}
                   alt="Card image cap"
-                  height="250px"
+                  height="550px"
                 />
                 <div className="card-body">
                   <h5 className="card-title text-center">{e.nama}</h5>
