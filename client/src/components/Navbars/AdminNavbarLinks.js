@@ -243,9 +243,7 @@ export default function AdminNavbarLinks() {
                         </MenuItem>
                         <MenuItem value={"Fisika"}>Fisika</MenuItem>
                         <MenuItem value={"Statistika"}>Statistika</MenuItem>
-                        <MenuItem value={"Kimia"}>
-                          Kimia
-                        </MenuItem>
+                        <MenuItem value={"Kimia"}>Kimia</MenuItem>
                       </Select>
                     </FormControl>
                   </div>
