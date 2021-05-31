@@ -163,6 +163,16 @@ export default function HasilPencarian(props) {
                   />
                 </FormGroup>
                 <FormGroup>
+                  <Label for="examplettlLahir">Tempat dan Tanggal Lahir</Label>
+                  <Input
+                    disabled
+                    type="text"
+                    name="ttlLahir"
+                    id="examplettlLahir"
+                    value={mahasiswa.ttlLahir}
+                  />
+                </FormGroup>
+                <FormGroup>
                   <Label for="exampleJeniskelamin">Jenis Kelamin</Label>
                   <Input
                     disabled
@@ -170,6 +180,16 @@ export default function HasilPencarian(props) {
                     name="jeniskelamin"
                     id="exampleJeniskelamin"
                     value={mahasiswa.jk}
+                  />
+                </FormGroup>
+                <FormGroup>
+                  <Label for="exampleNoHP">No HP</Label>
+                  <Input
+                    disabled
+                    type="text"
+                    name="noHP"
+                    id="exampleNoHP"
+                    value={mahasiswa.noHP}
                   />
                 </FormGroup>
                 <FormGroup>
