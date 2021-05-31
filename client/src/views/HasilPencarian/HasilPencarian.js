@@ -114,34 +114,38 @@ export default function HasilPencarian(props) {
   return (
     <>
       <GridContainer>
-        {data.map((e) => (
-          <GridItem key={e.npm} xs={12} sm={4} md={4} lg={4}>
-            <div className="card mt-3 " style={{ width: "100%" }}>
-              <img
-                className="card-img-top"
-                src={e.urlFoto}
-                alt="Card image cap"
-                height="250px"
-              />
-              <div className="card-body">
-                <h5 className="card-title text-center">{e.nama}</h5>
-                <p className="card-text text-center">
-                  {e.npm} <br></br>
-                  {e.prodi}
-                </p>
-                <div className="d-flex justify-content-end">
-                  <a
-                    onClick={() => toggle(e.npm)}
-                    href="#"
-                    className="btn btn-primary "
-                  >
-                    Detail
-                  </a>
+        {data != "" ? (
+          data.map((e) => (
+            <GridItem key={e.npm} xs={12} sm={4} md={4} lg={4}>
+              <div className="card mt-3 " style={{ width: "100%" }}>
+                <img
+                  className="card-img-top"
+                  src={e.urlFoto}
+                  alt="Card image cap"
+                  height="250px"
+                />
+                <div className="card-body">
+                  <h5 className="card-title text-center">{e.nama}</h5>
+                  <p className="card-text text-center">
+                    {e.npm} <br></br>
+                    {e.prodi}
+                  </p>
+                  <div className="d-flex justify-content-end">
+                    <a
+                      onClick={() => toggle(e.npm)}
+                      href="#"
+                      className="btn btn-primary "
+                    >
+                      Detail
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </GridItem>
-        ))}
+            </GridItem>
+          ))
+        ) : (
+          <p className="ml-3">Data tidak ditemukan...</p>
+        )}
         <div>
           {mahasiswa ? (
             <Modal isOpen={modal} toggle={toggle}>
