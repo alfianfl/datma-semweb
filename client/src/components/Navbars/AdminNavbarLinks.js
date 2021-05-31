@@ -35,15 +35,18 @@ export default function AdminNavbarLinks() {
     name: true,
     prodi: true,
     angkatan: true,
+    agama: true,
   });
-  const [inputForAll, setInputForAll] = useState(null);
-  const [inputData, setInputData] = useState(null);
-  const [dataProdi, setDataProdi] = useState(null);
-  const [dataAngkatan, setDataAngakatan] = useState(null);
+  const [inputForAll, setInputForAll] = useState("");
+  const [inputData, setInputData] = useState("");
+  const [dataProdi, setDataProdi] = useState("");
+  const [dataAngkatan, setDataAngakatan] = useState("");
+  const [dataAgama, setDataAgama] = useState("");
   const [isGoing, setIsGoing] = useState({
     name: false,
     prodi: false,
     angkatan: false,
+    agama: false,
   });
   const [modal, setModal] = useState(false);
   const theme = useTheme();
@@ -74,13 +77,19 @@ export default function AdminNavbarLinks() {
       setIsGoing({ ...value }, value);
       setDisable({ ...disable, prodi: !disable.prodi });
       if (value === false) {
-        setDataProdi(null);
+        setDataProdi("");
       }
-    } else {
+    } else if (name === "angkatan") {
       setIsGoing({ ...value }, value);
       setDisable({ ...disable, angkatan: !disable.angkatan });
       if (value === false) {
-        setDataAngakatan(null);
+        setDataAngakatan("");
+      }
+    } else {
+      setIsGoing({ ...value }, value);
+      setDisable({ ...disable, agama: !disable.agama });
+      if (value === false) {
+        setDataAgama("");
       }
     }
   };
@@ -89,34 +98,15 @@ export default function AdminNavbarLinks() {
     window.location.href = "hasilPencarian?query=" + inputForAll;
   };
   const buttonHandlerAdvanced = (e) => {
-    if (inputData != null) {
-      if (inputData != null && dataProdi != null && dataAngkatan != null) {
-        window.location.href =
-          "hasilPencarian?nama=" +
-          inputData +
-          "&prodi=" +
-          dataProdi +
-          "&angkatan=" +
-          dataAngkatan;
-      } else if (inputData != null && dataProdi != null) {
-        window.location.href =
-          "hasilPencarian?nama=" + inputData + "&prodi=" + dataProdi;
-      } else if (inputData != null && dataAngkatan != null) {
-        window.location.href =
-          "hasilPencarian?nama=" + inputData + "&angkatan=" + dataAngkatan;
-      } else {
-        window.location.href = "hasilPencarian?nama=" + inputData;
-      }
-    } else if (dataProdi != null) {
-      if (dataProdi != null && dataAngkatan != null) {
-        window.location.href =
-          "hasilPencarian?prodi=" + dataProdi + "&angkatan=" + dataAngkatan;
-      } else {
-        window.location.href = "hasilPencarian?prodi=" + dataProdi;
-      }
-    } else if (dataAngkatan != null) {
-      window.location.href = "hasilPencarian?angkatan=" + dataAngkatan;
-    }
+    window.location.href =
+      "hasilPencarian?nama=" +
+      inputData +
+      "&prodi=" +
+      dataProdi +
+      "&angkatan=" +
+      dataAngkatan +
+      "&agama=" +
+      dataAgama;
   };
 
   return (
@@ -281,6 +271,43 @@ export default function AdminNavbarLinks() {
                         <MenuItem value={"2019"}>2019</MenuItem>
                         <MenuItem value={"2020"}>2020</MenuItem>
                         <MenuItem value={"2021"}>2021</MenuItem>
+                      </Select>
+                    </FormControl>
+                  </div>
+                  <div className="d-flex">
+                    <div className="form-check form-check-inline">
+                      <input
+                        name="agama"
+                        checked={isGoing.agama}
+                        className="form-check-input"
+                        type="checkbox"
+                        id="inlineCheckbox1"
+                        defaultValue="option1"
+                        onChange={setCheckBox}
+                      />
+                    </div>
+                    <FormControl
+                      style={{ width: "100%" }}
+                      className={classes2.formControl}
+                    >
+                      <InputLabel id="demo-simple-select-helper-label">
+                        Agama
+                      </InputLabel>
+
+                      <Select
+                        disabled={disable.agama}
+                        labelId="demo-simple-select-helper-label"
+                        id="demo-simple-select-helper"
+                        value={dataAgama}
+                        onChange={(e) => setDataAgama(e.target.value)}
+                      >
+                        <MenuItem value="">
+                          <em>None</em>
+                        </MenuItem>
+                        <MenuItem value={"islam"}>Islam</MenuItem>
+                        <MenuItem value={"kristen"}>Kristen</MenuItem>
+                        <MenuItem value={"budha"}>Budha</MenuItem>
+                        <MenuItem value={"hindu"}>Hindu</MenuItem>
                       </Select>
                     </FormControl>
                   </div>

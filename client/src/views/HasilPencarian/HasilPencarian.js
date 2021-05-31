@@ -97,92 +97,17 @@ export default function HasilPencarian(props) {
           console.log(err);
         });
     } else {
-      if (params.nama) {
-        if (params.nama && params.prodi && params.angkatan) {
-          axios
-            .get(
-              `http://localhost:5000/api/datma/?nama=${params.nama}&prodi=${params.prodi}&angkatan=${params.angkatan}`
-            )
-            .then((response) => {
-              console.log(response.data.data);
-              setData(response.data.data);
-            })
-            .catch((err) => {
-              console.log(err);
-            });
-        } else if (params.nama && params.prodi) {
-          axios
-            .get(
-              `http://localhost:5000/api/datma/?nama=${params.nama}&prodi=${params.prodi}`
-            )
-            .then((response) => {
-              console.log(response.data.data);
-              setData(response.data.data);
-            })
-            .catch((err) => {
-              console.log(err);
-            });
-        } else if (params.nama && params.angkatan) {
-          axios
-            .get(
-              `http://localhost:5000/api/datma/?nama=${params.nama}&angkatan=${params.angkatan}`
-            )
-            .then((response) => {
-              console.log(response.data.data);
-              setData(response.data.data);
-            })
-            .catch((err) => {
-              console.log(err);
-            });
-        } else {
-          const url1 = `http://localhost:5000/api/datma/?nama=${params.nama}`;
-          axios
-            .get(url1)
-            .then((response) => {
-              console.log(response.data.data);
-              setData(response.data.data);
-            })
-            .catch((err) => {
-              console.log(err);
-            });
-        }
-      } else if (params.prodi) {
-        if (params.prodi && params.angkatan) {
-          axios
-            .get(
-              `http://localhost:5000/api/datma/?prodi=${params.prodi}&angkatan=${params.angkatan}`
-            )
-            .then((response) => {
-              console.log(response.data.data);
-              setData(response.data.data);
-            })
-            .catch((err) => {
-              console.log(err);
-            });
-        } else {
-          const url2 = `http://localhost:5000/api/datma/?prodi=${params.prodi}`;
-          axios
-            .get(url2)
-            .then((response) => {
-              console.log(response.data.data);
-              setData(response.data.data);
-            })
-            .catch((err) => {
-              console.log(err);
-            });
-        }
-      } else if (params.angkatan) {
-        const url3 = `http://localhost:5000/api/datma/?angkatan=${params.angkatan}`;
-        axios
-          .get(url3)
-          .then((response) => {
-            console.log(response.data.data);
-            setData(response.data.data);
-          })
-          .catch((err) => {
-            console.log(err);
-          });
-      }
+      axios
+        .get(
+          `http://localhost:5000/api/datma/?nama=${params.nama}&prodi=${params.prodi}&angkatan=${params.angkatan}&agama=${params.agama}`
+        )
+        .then((response) => {
+          console.log(response.data.data);
+          setData(response.data.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
   }, []);
 
