@@ -35,10 +35,10 @@ export default function HasilPencarian(props) {
     setModal(!modal);
   };
   const handlerAngkatan = (angkatan) => {
-    window.location.href = "hasilPencarian?angkatan=" + angkatan;
+    window.location.href = "hasilPencarian?query=" + angkatan;
   };
   const handlerProdi = (prodi) => {
-    window.location.href = "hasilPencarian?prodi=" + prodi;
+    window.location.href = "hasilPencarian?query=" + prodi;
   };
   useEffect(() => {
     let path = props.location.search;
