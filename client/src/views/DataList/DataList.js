@@ -53,7 +53,7 @@ export default function TableList() {
               className="card-img-top"
               src={e.urlFoto}
               alt="Card image cap"
-              height="350px"
+              height="450px"
             />
             <div className="card-body">
               <h5 className="card-title text-center">{e.nama}</h5>
