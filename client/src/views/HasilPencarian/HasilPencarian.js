@@ -47,46 +47,9 @@ export default function HasilPencarian(props) {
 
     if (params.query) {
       axios
-        .get(`http://localhost:5000/api/datma/?nama=${params.query}`)
+        .get(`http://localhost:5000/api/search/?search=${params.query}`)
         .then((response) => {
           console.log();
-          if (response.data.message === "Show all Data Mahasiswa") {
-            setData(response.data.data);
-          } else {
-            setDummy(response.data.data);
-          }
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-      axios
-        .get(`http://localhost:5000/api/datma/?agama=${params.query}`)
-        .then((response) => {
-          console.log();
-          if (response.data.message === "Show all Data Mahasiswa") {
-            setData(response.data.data);
-          } else {
-            setDummy(response.data.data);
-          }
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-      axios
-        .get(`http://localhost:5000/api/datma/?prodi=${params.query}`)
-        .then((response) => {
-          if (response.data.message === "Show all Data Mahasiswa") {
-            setData(response.data.data);
-          } else {
-            setDummy(response.data.data);
-          }
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-      axios
-        .get(`http://localhost:5000/api/datma/?angkatan=${params.query}`)
-        .then((response) => {
           if (response.data.message === "Show all Data Mahasiswa") {
             setData(response.data.data);
           } else {
@@ -99,7 +62,7 @@ export default function HasilPencarian(props) {
     } else {
       axios
         .get(
-          `http://localhost:5000/api/datma/?nama=${params.nama}&prodi=${params.prodi}&angkatan=${params.angkatan}&agama=${params.agama}`
+          `http://localhost:5000/api/datma/?nama=${params.nama}&prodi=${params.prodi}&angkatan=${params.angkatan}&keahlian=${params.keahlian}`
         )
         .then((response) => {
           console.log(response.data.data);
@@ -122,7 +85,7 @@ export default function HasilPencarian(props) {
                   className="card-img-top"
                   src={e.urlFoto}
                   alt="Card image cap"
-                  height="250px"
+                  height="350px"
                 />
                 <div className="card-body">
                   <h5 className="card-title text-center">{e.nama}</h5>
@@ -167,13 +130,53 @@ export default function HasilPencarian(props) {
                   />
                 </FormGroup>
                 <FormGroup>
-                  <Label for="examplettlLahir">Tempat dan Tanggal Lahir</Label>
+                  <Label for="examplettLahir">Tempat dan Tanggal Lahir</Label>
                   <Input
                     disabled
                     type="text"
-                    name="ttlLahir"
-                    id="examplettlLahir"
-                    value={mahasiswa.ttlLahir}
+                    name="ttLahir"
+                    id="examplettLahir"
+                    value={mahasiswa.ttLahir}
+                  />
+                </FormGroup>
+                <FormGroup>
+                  <Label for="exampleNPM">NPM</Label>
+                  <Input
+                    disabled
+                    type="text"
+                    name="NPM"
+                    id="exampleNPM"
+                    value={mahasiswa.npm}
+                  />
+                </FormGroup>
+                <FormGroup>
+                  <Label for="exampleAngkatan">Angkatan</Label>
+                  <Input
+                    disabled
+                    type="text"
+                    name="angkatan"
+                    id="exampleAngkatan"
+                    value={mahasiswa.angkatan}
+                  />
+                </FormGroup>
+                <FormGroup>
+                  <Label for="exampleProdstud">Program Studi</Label>
+                  <Input
+                    disabled
+                    type="text"
+                    name="prodtud"
+                    id="exampleProdstud"
+                    value={mahasiswa.prodi}
+                  />
+                </FormGroup>
+                <FormGroup>
+                  <Label for="exampleAngkatan">Bidang Minat</Label>
+                  <Input
+                    disabled
+                    type="text"
+                    name="bidangMinat"
+                    id="exampleBidangMinat"
+                    value={mahasiswa.keahlian}
                   />
                 </FormGroup>
                 <FormGroup>
@@ -207,26 +210,6 @@ export default function HasilPencarian(props) {
                   />
                 </FormGroup>
                 <FormGroup>
-                  <Label for="exampleAngkatan">Angkatan</Label>
-                  <Input
-                    disabled
-                    type="text"
-                    name="angkatan"
-                    id="exampleAngkatan"
-                    value={mahasiswa.angkatan}
-                  />
-                </FormGroup>
-                <FormGroup>
-                  <Label for="exampleNPM">NPM</Label>
-                  <Input
-                    disabled
-                    type="text"
-                    name="NPM"
-                    id="exampleNPM"
-                    value={mahasiswa.npm}
-                  />
-                </FormGroup>
-                <FormGroup>
                   <Label for="exampleEmail">Email</Label>
                   <Input
                     disabled
@@ -236,16 +219,7 @@ export default function HasilPencarian(props) {
                     value={mahasiswa.email}
                   />
                 </FormGroup>
-                <FormGroup>
-                  <Label for="exampleProdstud">Program Studi</Label>
-                  <Input
-                    disabled
-                    type="text"
-                    name="prodtud"
-                    id="exampleProdstud"
-                    value={mahasiswa.prodi}
-                  />
-                </FormGroup>
+
                 <FormGroup>
                   <Label for="exampleTextarea">Alamat</Label>
                   <Input

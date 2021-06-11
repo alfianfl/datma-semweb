@@ -35,13 +35,13 @@ export default function AdminNavbarLinks() {
     name: true,
     prodi: true,
     angkatan: true,
-    agama: true,
+    keahlian: true,
   });
   const [inputForAll, setInputForAll] = useState("");
   const [inputData, setInputData] = useState("");
   const [dataProdi, setDataProdi] = useState("");
   const [dataAngkatan, setDataAngakatan] = useState("");
-  const [dataAgama, setDataAgama] = useState("");
+  const [dataKeahlian, setDataKeahlian] = useState("");
   const [isGoing, setIsGoing] = useState({
     name: false,
     prodi: false,
@@ -87,9 +87,9 @@ export default function AdminNavbarLinks() {
       }
     } else {
       setIsGoing({ ...value }, value);
-      setDisable({ ...disable, agama: !disable.agama });
+      setDisable({ ...disable, keahlian: !disable.keahlian });
       if (value === false) {
-        setDataAgama("");
+        setDataKeahlian("");
       }
     }
   };
@@ -105,8 +105,8 @@ export default function AdminNavbarLinks() {
       dataProdi +
       "&angkatan=" +
       dataAngkatan +
-      "&agama=" +
-      dataAgama;
+      "&keahlian=" +
+      dataKeahlian;
   };
 
   return (
@@ -277,8 +277,8 @@ export default function AdminNavbarLinks() {
                   <div className="d-flex">
                     <div className="form-check form-check-inline">
                       <input
-                        name="agama"
-                        checked={isGoing.agama}
+                        name="keahlianMahasiswa"
+                        checked={isGoing.keahlian}
                         className="form-check-input"
                         type="checkbox"
                         id="inlineCheckbox1"
@@ -286,30 +286,20 @@ export default function AdminNavbarLinks() {
                         onChange={setCheckBox}
                       />
                     </div>
-                    <FormControl
+                    <TextField
                       style={{ width: "100%" }}
-                      className={classes2.formControl}
-                    >
-                      <InputLabel id="demo-simple-select-helper-label">
-                        Agama
-                      </InputLabel>
-
-                      <Select
-                        disabled={disable.agama}
-                        labelId="demo-simple-select-helper-label"
-                        id="demo-simple-select-helper"
-                        value={dataAgama}
-                        onChange={(e) => setDataAgama(e.target.value)}
-                      >
-                        <MenuItem value="">
-                          <em>None</em>
-                        </MenuItem>
-                        <MenuItem value={"islam"}>Islam</MenuItem>
-                        <MenuItem value={"kristen"}>Kristen</MenuItem>
-                        <MenuItem value={"budha"}>Budha</MenuItem>
-                        <MenuItem value={"hindu"}>Hindu</MenuItem>
-                      </Select>
-                    </FormControl>
+                      disabled={disable.keahlian}
+                      className="mx-2"
+                      label="Keahlian / Bidang Minat"
+                      inputProps={{
+                        placeholder: "Keahlian / Bidang Minat",
+                        inputProps: {
+                          "aria-label": "Search",
+                        },
+                        value: dataKeahlian,
+                        onChange: (e) => setDataKeahlian(e.target.value),
+                      }}
+                    />
                   </div>
                 </ModalBody>
                 <ModalFooter>

@@ -53,7 +53,7 @@ export default function TableList() {
               className="card-img-top"
               src={e.urlFoto}
               alt="Card image cap"
-              height="250px"
+              height="350px"
             />
             <div className="card-body">
               <h5 className="card-title text-center">{e.nama}</h5>
@@ -93,6 +93,16 @@ export default function TableList() {
                 />
               </FormGroup>
               <FormGroup>
+                <Label for="examplettLahir">Tempat dan Tanggal Lahir</Label>
+                <Input
+                  disabled
+                  type="text"
+                  name="ttLahir"
+                  id="examplettLahir"
+                  value={mahasiswa.ttLahir}
+                />
+              </FormGroup>
+              <FormGroup>
                 <Label for="exampleJeniskelamin">Jenis Kelamin</Label>
                 <Input
                   disabled
@@ -113,6 +123,16 @@ export default function TableList() {
                 />
               </FormGroup>
               <FormGroup>
+                <Label for="exampleProdstud">Program Studi</Label>
+                <Input
+                  disabled
+                  type="text"
+                  name="prodtud"
+                  id="exampleProdstud"
+                  value={mahasiswa.prodi}
+                />
+              </FormGroup>
+              <FormGroup>
                 <Label for="exampleAngkatan">Angkatan</Label>
                 <Input
                   disabled
@@ -120,6 +140,16 @@ export default function TableList() {
                   name="angkatan"
                   id="exampleAngkatan"
                   value={mahasiswa.angkatan}
+                />
+              </FormGroup>
+              <FormGroup>
+                <Label for="exampleAngkatan">Bidang Minat</Label>
+                <Input
+                  disabled
+                  type="text"
+                  name="bidangMinat"
+                  id="exampleBidangMinat"
+                  value={mahasiswa.keahlian}
                 />
               </FormGroup>
               <FormGroup>
@@ -140,16 +170,6 @@ export default function TableList() {
                   name="email"
                   id="exampleEmail"
                   value={mahasiswa.email}
-                />
-              </FormGroup>
-              <FormGroup>
-                <Label for="exampleProdstud">Program Studi</Label>
-                <Input
-                  disabled
-                  type="text"
-                  name="prodtud"
-                  id="exampleProdstud"
-                  value={mahasiswa.prodi}
                 />
               </FormGroup>
               <FormGroup>
