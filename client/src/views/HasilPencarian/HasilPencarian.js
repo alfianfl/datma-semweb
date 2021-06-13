@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ReactPaginate from "react-paginate";
 import queryString from "query-string";
 import axios from "axios";
 import {
@@ -21,6 +22,16 @@ export default function HasilPencarian(props) {
   const [data, setData] = useState([]);
   const [dummy, setDummy] = useState(false);
   const [mahasiswa, setMahasiswa] = useState([]);
+  const [pageNumber, setPageNumber] = useState(0);
+
+  const usersPerPage = 9;
+  const pagesVisited = pageNumber * usersPerPage;
+
+  const pageCount = Math.ceil(data.length / usersPerPage);
+
+  const changePage = ({ selected }) => {
+    setPageNumber(selected);
+  };
 
   const toggle = (npm) => {
     axios
@@ -78,7 +89,7 @@ export default function HasilPencarian(props) {
     <>
       <GridContainer>
         {data != "" ? (
-          data.map((e) => (
+          data.slice(pagesVisited, pagesVisited + usersPerPage).map((e) => (
             <GridItem key={e.npm} xs={12} sm={4} md={4} lg={4}>
               <div className="card mt-3 " style={{ width: "100%" }}>
                 <img
@@ -241,6 +252,17 @@ export default function HasilPencarian(props) {
             dummy
           )}
         </div>
+        <ReactPaginate
+          previousLabel={"previous"}
+          nextLabel={"next"}
+          pageCount={pageCount}
+          onPageChange={changePage}
+          containerClassName={"paginationBttns"}
+          previousLinkClassName={"previousBttn"}
+          nextLinkClassName={"nextBttn"}
+          disabledClassName={"paginationDisabled"}
+          activeClassName={"paginationActive"}
+        />
       </GridContainer>
       <h1 style={{ fontSize: "25px" }} className="my-3 mx-3 ">
         Prodi Lainnya

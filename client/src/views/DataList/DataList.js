@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ReactPaginate from "react-paginate";
 import axios from "axios";
 import {
   Button,
@@ -10,7 +11,6 @@ import {
   Label,
   Input,
 } from "reactstrap";
-
 // core components
 import GridItem from "components/Grid/GridItem.js";
 import GridContainer from "components/Grid/GridContainer.js";
@@ -19,6 +19,16 @@ export default function TableList() {
   const [modal, setModal] = useState(false);
   const [data, setData] = useState([]);
   const [mahasiswa, setMahasiswa] = useState([]);
+  const [pageNumber, setPageNumber] = useState(0);
+
+  const usersPerPage = 9;
+  const pagesVisited = pageNumber * usersPerPage;
+
+  const pageCount = Math.ceil(data.length / usersPerPage);
+
+  const changePage = ({ selected }) => {
+    setPageNumber(selected);
+  };
 
   const toggle = (npm) => {
     axios
@@ -46,7 +56,7 @@ export default function TableList() {
   }, []);
   return (
     <GridContainer>
-      {data.map((e) => (
+      {data.slice(pagesVisited, pagesVisited + usersPerPage).map((e) => (
         <GridItem key={e.npm} xs={12} sm={4} md={4} lg={4}>
           <div className="card mt-3 " style={{ width: "100%" }}>
             <img
@@ -191,6 +201,17 @@ export default function TableList() {
           </Modal>
         ) : null}
       </div>
+      <ReactPaginate
+        previousLabel={"previous"}
+        nextLabel={"next"}
+        pageCount={pageCount}
+        onPageChange={changePage}
+        containerClassName={"paginationBttns"}
+        previousLinkClassName={"previousBttn"}
+        nextLinkClassName={"nextBttn"}
+        disabledClassName={"paginationDisabled"}
+        activeClassName={"paginationActive"}
+      />
     </GridContainer>
   );
 }
